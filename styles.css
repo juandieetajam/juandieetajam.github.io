@@ -19,16 +19,17 @@ section {
 
 /* ===== NAVBAR ===== */
 .modern-navbar {
-  background: rgba(10, 10, 10, 0.65);
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(51, 153, 255, 0.25);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  background: rgba(20, 20, 20, 0.4); /* más translúcido */
+  backdrop-filter: blur(15px) saturate(180%);
+  -webkit-backdrop-filter: blur(15px) saturate(180%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.3);
   transition: background 0.4s ease, box-shadow 0.4s ease;
   z-index: 1000;
 }
 
 .modern-navbar.scrolled {
-  background: rgba(10, 10, 10, 0.95);
+  background: rgba(20, 20, 20, 0.75);
   box-shadow: 0 2px 20px rgba(51, 153, 255, 0.3);
 }
 
@@ -45,17 +46,9 @@ section {
 }
 
 @keyframes brandColorFlow {
-  0% {
-    background-position: 0% 50%;
-  }
-
-  50% {
-    background-position: 100% 50%;
-  }
-
-  100% {
-    background-position: 0% 50%;
-  }
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 /* ===== Links ===== */
@@ -149,7 +142,7 @@ section {
   box-shadow: 0 0 10px rgba(0, 255, 255, 0.4);
 }
 
-/* ===== Animación hamburguesa → X ===== */
+/* Animación hamburguesa → X */
 .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::before {
   transform: rotate(45deg);
   top: 50%;
@@ -314,31 +307,90 @@ section {
 /* ===== PROYECTOS ===== */
 #projects {
   background-color: #181818;
-  /* Gris oscuro */
   color: #f1f1f1;
   padding: 5rem 0;
+  position: relative;
+  overflow: hidden;
 }
 
-.container p {
-  color: #f5f5f5;
-  /* Gris medio */
+/* Fondo animado sutil detrás de los proyectos */
+#projects::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 200%;
+  height: 100%;
+  background: linear-gradient(120deg, #3399ff, #6f00ff, #00ccff, #3399ff);
+  background-size: 400% 400%;
+  opacity: 0.05;
+  animation: gradientMove 30s linear infinite;
+  z-index: 0;
 }
 
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Contenedor de proyectos por encima del fondo */
+#projects .container {
+  position: relative;
+  z-index: 1;
+}
+
+.project-intro {
+  color: #b3b3b3;
+  font-size: 1.1rem;
+}
+
+/* Tarjetas de proyecto con gradiente y sombra dinámica */
 .project-card {
-  background: #202020;
-  /* Gris oscuro */
-  border: none;
-  border-radius: 12px;
+  background: linear-gradient(145deg, #202020, #1c1c1c);
+  border-radius: 15px;
   padding: 1.5rem;
   height: 100%;
-  transition: box-shadow 0.3s ease;
-  /* Transición suave para la sombra */
+  transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.6s ease;
+  box-shadow: 0 6px 18px rgba(51, 153, 255, 0.1);
 }
 
-.project-card:hover {
-  box-shadow: 0 6px 18px rgba(200, 200, 200, 0.2);
-  /* Sombra gris más clara en hover */
+.project-card h4 {
+  font-size: 1.3rem;
+  margin-bottom: 0.8rem;
+  color: #66b3ff;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: color 0.4s ease;
 }
+
+.project-card p {
+  color: #cccccc;
+  font-size: 0.95rem;
+}
+
+/* Hover más dinámico: levanta la tarjeta y cambia gradiente */
+.project-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  background: linear-gradient(145deg, #3399ff33, #6f00ff33, #00ccff33);
+  box-shadow: 0 12px 30px rgba(51, 153, 255, 0.3);
+}
+
+/* Iconos más visibles al pasar el mouse */
+.project-card:hover h4 i {
+  transform: rotate(15deg);
+  color: #00ccff;
+  transition: transform 0.5s ease, color 0.4s ease;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .project-card {
+    margin-bottom: 1rem;
+  }
+}
+
 
 /* ===== CONTACTO ===== */
 #contact {
