@@ -28,38 +28,41 @@
   <link rel="stylesheet" href="styles.css" />
 
   <script>
-  window.addEventListener("scroll", function () {
-    const navbar = document.querySelector(".modern-navbar");
-    if (window.scrollY > 50) navbar.classList.add("scrolled");
-    else navbar.classList.remove("scrolled");
-  });
-</script>
+    window.addEventListener("scroll", function () {
+      const navbar = document.querySelector(".modern-navbar");
+      if (window.scrollY > 50) navbar.classList.add("scrolled");
+      else navbar.classList.remove("scrolled");
+    });
+  </script>
 
 </head>
 
 <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="70" tabindex="0">
 
-<!-- ===== NAVBAR ===== -->
-<nav class="navbar navbar-expand-lg fixed-top modern-navbar">
-  <div class="container">
-    <a class="navbar-brand fw-bold" href="#hero">
-      <span class="brand-gradient"><i class="bi bi-code-slash"></i> Juan Diego Tajam</span>
-    </a>
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar navbar-expand-lg fixed-top modern-navbar">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#hero">
+        <span class="brand-gradient"><i class="bi bi-code-slash"></i> Juan Diego Tajam</span>
+      </a>
 
-    <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+      <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon">
+          <div></div>
+        </span>
+      </button>
 
-    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-      <ul class="navbar-nav align-items-center">
-        <li class="nav-item"><a class="nav-link active" href="#about">Sobre mí</a></li>
-        <li class="nav-item"><a class="nav-link" href="#skills">Habilidades</a></li>
-        <li class="nav-item"><a class="nav-link" href="#projects">Proyectos</a></li>
-        <li class="nav-item"><a class="nav-link" href="#contact">Contacto</a></li>
-      </ul>
+
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav align-items-center">
+          <li class="nav-item"><a class="nav-link active" href="#about">Sobre mí</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Habilidades</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Proyectos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contacto</a></li>
+        </ul>
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
 
 
   <!-- ===== HERO ===== -->
@@ -126,7 +129,8 @@
         <div class="col-md-3" data-aos="zoom-in">
           <div class="card skill-card h-100 text-center">
             <div class="card-body">
-              <h5 class="card-title"><i class="bi bi-cloud-arrow-up text-accent"></i><br>Despliegue e Infraestructura</h5>
+              <h5 class="card-title"><i class="bi bi-cloud-arrow-up text-accent"></i><br>Despliegue e Infraestructura
+              </h5>
               <ul class="list-unstyled mt-3 text-center">
                 <li>AWS</li>
                 <li>Azure</li>
@@ -165,7 +169,8 @@
           <div class="project-card p-4 rounded shadow-sm h-100">
             <h4><i class="bi bi-airplane"></i> Sistema de Aeropuertos</h4>
             <p>Implementación en Java para gestionar viajeros, ciudades, conexiones y vuelos, con una clase
-              <em>Retorno</em> para controlar resultados.</p>
+              <em>Retorno</em> para controlar resultados.
+            </p>
           </div>
         </div>
         <div class="col-md-4" data-aos="fade-up">
@@ -248,4 +253,5 @@
   </script>
 
 </body>
+
 </html>
