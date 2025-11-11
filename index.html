@@ -80,10 +80,12 @@
       <img src="./img/foto cv.jpg" alt="Foto de perfil de Juan Diego Tajam" class="profile-img mb-4">
       <h2 class="mb-4"><i class="bi bi-person-circle"></i> Sobre mí</h2>
       <p class="mx-auto" style="max-width: 750px;">
-        Soy estudiante de Analista en Tecnologías de la Información, comprometido y con actitud proactiva.
-        Me apasiona el desarrollo de software, la arquitectura limpia y las buenas prácticas de programación.
-        Busco mi primera experiencia profesional para aplicar mis conocimientos en tecnologías actuales y seguir
-        creciendo en el área.
+        Soy estudiante de Analista en Tecnologías de la Información, me gustaría formar parte de un equipo de donde
+        pueda
+        desarrollar mic capacidades técnicas y humanas, con compromiso y poractividad.
+        Me apasiona el desarrollo de software y me interesa especialmente la arquitectura limpia y las buenas prácticas
+        de programación. Estoy en busca de mi primera experiencia profesional donde pueda aplicar mis conocimientos en
+        tecnologías actuales y continuar creciendo como desarrollador.
       </p>
     </div>
   </section>
@@ -269,7 +271,15 @@
   <script>
     const stars = document.querySelectorAll('.star');
     const ratingValue = document.getElementById('rating-value');
-    let selectedRating = 0;
+    let selectedRating = localStorage.getItem('portfolioRating') || 0;
+
+    // Mostrar calificación guardada
+    if (selectedRating > 0) {
+      for (let i = 0; i < selectedRating; i++) {
+        stars[i].classList.add('selected');
+      }
+      ratingValue.textContent = `Tu calificación: ${selectedRating} estrella${selectedRating > 1 ? 's' : ''}`;
+    }
 
     stars.forEach(star => {
       star.addEventListener('mouseover', () => {
@@ -288,6 +298,7 @@
 
       star.addEventListener('click', () => {
         selectedRating = star.dataset.value;
+        localStorage.setItem('portfolioRating', selectedRating); // 🔹 guarda el valor
         ratingValue.textContent = `Gracias por calificar: ${selectedRating} estrella${selectedRating > 1 ? 's' : ''}`;
         stars.forEach(s => s.classList.remove('selected'));
         for (let i = 0; i < selectedRating; i++) {
@@ -296,6 +307,7 @@
       });
     });
   </script>
+
 
 
 </body>
