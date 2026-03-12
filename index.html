@@ -1,463 +1,443 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfolio de Juan Diego Tajam, estudiante de Analista en TI enfocado en desarrollo de software y ciberseguridad."
+    />
 
-  <meta name="description"
-    content="Portfolio de Juan Diego Tajam, estudiante de Analista en TI enfocado en desarrollo de software y ciberseguridad." />
+    <meta
+      name="keywords"
+      content="Juan Diego Tajam, cibzerseguridad, cybersecurity, IT support, desarrollador, analista TI, seguridad informática"
+    />
 
-  <meta name="keywords"
-    content="Juan Diego Tajam, ciberseguridad, cybersecurity, IT support, desarrollador, analista TI, seguridad informática" />
+    <meta name="author" content="Juan Diego Tajam" />
 
-  <meta name="author" content="Juan Diego Tajam" />
+    <title>Juan Diego Tajam | Cybersecurity & Development</title>
 
-  <title>Juan Diego Tajam | Cybersecurity & Development</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛡️</text></svg>"
+    />
 
-  <link rel="icon"
-    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛡️</text></svg>" />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
 
-  <!-- Bootstrap -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
 
-  <!-- Bootstrap Icons -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
-  <!-- AOS -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
 
-  <link rel="stylesheet" href="styles.css" />
+    <script>
+      window.addEventListener("scroll", function () {
+        const navbar = document.querySelector(".modern-navbar");
+        if (window.scrollY > 50) navbar.classList.add("scrolled");
+        else navbar.classList.remove("scrolled");
+      });
+    </script>
+  </head>
 
-  <script>
-    window.addEventListener("scroll", function () {
-      const navbar = document.querySelector(".modern-navbar");
-      if (window.scrollY > 50) navbar.classList.add("scrolled");
-      else navbar.classList.remove("scrolled");
-    });
-  </script>
+  <body
+    data-bs-spy="scroll"
+    data-bs-target=".navbar"
+    data-bs-offset="70"
+    tabindex="0"
+  >
+    <!-- NAVBAR -->
 
-</head>
+    <nav class="navbar navbar-expand-lg fixed-top modern-navbar">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#hero">
+          <span class="brand-gradient"
+            ><i class="bi bi-shield-lock"></i> Juan Diego Tajam</span
+          >
+        </a>
 
-<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="70" tabindex="0">
+        <button
+          class="navbar-toggler custom-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon">
+            <div></div>
+          </span>
+        </button>
 
-  <!-- NAVBAR -->
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav align-items-center">
+            <li class="nav-item">
+              <a class="nav-link active" href="#about">Sobre mí</a>
+            </li>
 
-  <nav class="navbar navbar-expand-lg fixed-top modern-navbar">
-    <div class="container">
+            <li class="nav-item">
+              <a class="nav-link" href="#experience">Experiencia</a>
+            </li>
 
-      <a class="navbar-brand fw-bold" href="#hero">
-        <span class="brand-gradient"><i class="bi bi-shield-lock"></i> Juan Diego Tajam</span>
+            <li class="nav-item">
+              <a class="nav-link" href="#skills">Habilidades</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#security">Ciberseguridad</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#projects">Proyectos</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contacto</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+
+    <header
+      id="hero"
+      class="hero d-flex flex-column justify-content-center align-items-center text-center"
+    >
+      <h1 class="fw-bold">
+        Hola, soy <span id="typed-name" class="text-accent"></span
+        ><span id="cursor">|</span>
+      </h1>
+
+      <p class="lead mt-3">
+        Analista en TI en formación | Ciberseguridad | Desarrollo de Software
+      </p>
+
+      <a
+        href="./img/CV-Juan-Diego-Tajam-1.pdf"
+        class="btn-custom mt-3"
+        download
+      >
+        Descargar CV
       </a>
+    </header>
 
-      <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse"
-        data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon">
-          <div></div>
-        </span>
-      </button>
+    <!-- SOBRE MI -->
 
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+    <section id="about" class="py-5 text-center" data-aos="fade-up">
+      <div class="container">
+        <img
+          src="./img/foto cv.jpg"
+          alt="Foto de perfil de Juan Diego Tajam"
+          class="profile-img mb-4"
+        />
+        <h2 class="text-accent mb-4">
+          <i class="bi bi-briefcase-fill"></i> Sobre mí
+          </h2>
 
-        <ul class="navbar-nav align-items-center">
+        <p class="mx-auto" style="max-width: 750px">
+          Soy estudiante de Analista en Tecnologías de la Información y
+          actualmente trabajo en soporte IT. Me interesa especialmente el área
+          de ciberseguridad, comprendiendo cómo funcionan los sistemas para
+          identificar vulnerabilidades y mejorar su protección. Mi formación en
+          desarrollo de software me permite abordar la seguridad desde el diseño
+          de aplicaciones, aplicando buenas prácticas de programación, control
+          de accesos y protección de datos. Busco desarrollarme profesionalmente
+          en el área de seguridad informática, participando en el análisis
+          de riesgos, protección de sistemas y mejora continua de la seguridad
+          tecnológica.
+        </p>
+      </div>
+    </section>
 
-          <li class="nav-item">
-            <a class="nav-link active" href="#about">Sobre mí</a>
-          </li>
+    <!-- EXPERIENCIA -->
 
-          <li class="nav-item">
-            <a class="nav-link" href="#skills">Habilidades</a>
-          </li>
+    <section id="experience" class="py-5 text-center" data-aos="fade-up">
+      <div class="container">
+        <h2 class="text-accent mb-4">
+          <i class="bi bi-briefcase-fill"></i> Experiencia
+        </h2>
 
-          <li class="nav-item">
-            <a class="nav-link" href="#security">Ciberseguridad</a>
-          </li>
+        <p class="mx-auto" style="max-width: 700px">
+          <strong>IT Support Technician</strong><br />
+          <strong>2026 - Actualidad</strong>
+        </p>
 
-          <li class="nav-item">
-            <a class="nav-link" href="#projects">Proyectos</a>
-          </li>
+        <p class="mx-auto mt-3" style="max-width: 700px">
+          Actualmente trabajo brindando soporte técnico dentro de un entorno
+          corporativo, resolviendo incidencias relacionadas con sistemas
+          operativos, software, conectividad de red y gestión de accesos. Esta
+          experiencia me ha permitido desarrollar habilidades en diagnóstico de
+          problemas, administración básica de sistemas y aplicación de buenas
+          prácticas de seguridad informática en la gestión de usuarios y
+          protección de la información.
+        </p>
 
-          <li class="nav-item">
-            <a class="nav-link" href="#contact">Contacto</a>
-          </li>
-
+        <ul class="list-unstyled mt-4">
+          <li>Soporte técnico a usuarios</li>
+          <li>Diagnóstico y resolución de incidencias</li>
+          <li>Gestión de accesos y permisos</li>
+          <li>Soporte de software y sistemas</li>
+          <li>Buenas prácticas de seguridad informática</li>
         </ul>
-
       </div>
-    </div>
-  </nav>
+    </section>
+    
+    <!-- HABILIDADES -->
 
-  <!-- HERO -->
+    <section id="skills" class="py-5 text-center bg-dark" data-aos="fade-up">
+      <div class="container">
+        <h2 class="mb-4 text-accent">
+          <i class="bi bi-lightning-charge-fill"></i> Habilidades
+        </h2>
 
-  <header id="hero" class="hero d-flex flex-column justify-content-center align-items-center text-center">
+        <div class="row g-4 justify-content-center">
+          <!-- Lenguajes -->
 
-    <h1 class="fw-bold">
-      Hola, soy <span id="typed-name" class="text-accent"></span><span id="cursor">|</span>
-    </h1>
+          <div class="col-md-3">
+            <div class="card skill-card h-100 text-center">
+              <div class="card-body">
+                <h5 class="card-title">
+                  <i class="bi bi-code-slash text-accent"></i><br />
+                  Lenguajes y Tecnologías
+                </h5>
 
-    <p class="lead mt-3">
-      Analista en TI en formación | Ciberseguridad | Desarrollo de Software
-    </p>
-
-    <a href="./img/CV-Juan-Diego-Tajam-1.pdf" class="btn-custom mt-3" download>
-      Descargar CV
-    </a>
-
-  </header>
-
-  <!-- SOBRE MI -->
-
-  <section id="about" class="py-5 text-center" data-aos="fade-up">
-
-    <div class="container">
-
-      <img src="./img/foto cv.jpg" alt="Foto de perfil de Juan Diego Tajam" class="profile-img mb-4">
-
-      <h2 class="mb-4">
-        <i class="bi bi-person-circle"></i> Sobre mí
-      </h2>
-
-      <p class="mx-auto" style="max-width:750px;">
-
-        Soy estudiante de Analista en Tecnologías de la Información y actualmente trabajo en soporte IT.
-
-        Me interesa especialmente el área de **ciberseguridad**, comprendiendo cómo funcionan los sistemas
-        para identificar vulnerabilidades y mejorar su protección.
-
-        Mi formación en desarrollo de software me permite abordar la seguridad desde el diseño de aplicaciones,
-        aplicando buenas prácticas de programación, control de accesos y protección de datos.
-
-        Busco desarrollarme profesionalmente en el área de **seguridad informática**, participando en el
-        análisis de riesgos, protección de sistemas y mejora continua de la seguridad tecnológica.
-
-      </p>
-
-    </div>
-
-  </section>
-
-  <!-- HABILIDADES -->
-
-  <section id="skills" class="py-5 text-center bg-dark" data-aos="fade-up">
-
-    <div class="container">
-
-      <h2 class="mb-4 text-accent">
-        <i class="bi bi-lightning-charge-fill"></i> Habilidades
-      </h2>
-
-      <div class="row g-4 justify-content-center">
-
-        <!-- Lenguajes -->
-
-        <div class="col-md-3">
-
-          <div class="card skill-card h-100 text-center">
-
-            <div class="card-body">
-
-              <h5 class="card-title">
-                <i class="bi bi-code-slash text-accent"></i><br>
-                Lenguajes y Tecnologías
-              </h5>
-
-              <ul class="list-unstyled mt-3">
-
-                <li>C# / .NET</li>
-                <li>Java</li>
-                <li>JavaScript</li>
-                <li>HTML / CSS</li>
-                <li>SQL</li>
-
-              </ul>
-
+                <ul class="list-unstyled mt-3">
+                  <li>C# / .NET</li>
+                  <li>Java</li>
+                  <li>JavaScript</li>
+                  <li>HTML / CSS</li>
+                  <li>SQL</li>
+                </ul>
+              </div>
             </div>
-
           </div>
 
-        </div>
+          <!-- Desarrollo -->
 
-        <!-- Desarrollo -->
+          <div class="col-md-3">
+            <div class="card skill-card h-100 text-center">
+              <div class="card-body">
+                <h5 class="card-title">
+                  <i class="bi bi-diagram-3 text-accent"></i><br />
+                  Desarrollo
+                </h5>
 
-        <div class="col-md-3">
-
-          <div class="card skill-card h-100 text-center">
-
-            <div class="card-body">
-
-              <h5 class="card-title">
-                <i class="bi bi-diagram-3 text-accent"></i><br>
-                Desarrollo
-              </h5>
-
-              <ul class="list-unstyled mt-3">
-
-                <li>APIs REST</li>
-                <li>Arquitectura por capas</li>
-                <li>Principios SOLID</li>
-                <li>Algoritmos</li>
-
-              </ul>
-
+                <ul class="list-unstyled mt-3">
+                  <li>APIs REST</li>
+                  <li>Arquitectura por capas</li>
+                  <li>Principios SOLID</li>
+                  <li>Algoritmos</li>
+                </ul>
+              </div>
             </div>
-
           </div>
 
-        </div>
+          <!-- Seguridad -->
 
-        <!-- Seguridad -->
+          <div class="col-md-3">
+            <div class="card skill-card h-100 text-center">
+              <div class="card-body">
+                <h5 class="card-title">
+                  <i class="bi bi-shield-lock text-accent"></i><br />
+                  Ciberseguridad
+                </h5>
 
-        <div class="col-md-3">
-
-          <div class="card skill-card h-100 text-center">
-
-            <div class="card-body">
-
-              <h5 class="card-title">
-                <i class="bi bi-shield-lock text-accent"></i><br>
-                Ciberseguridad
-              </h5>
-
-              <ul class="list-unstyled mt-3">
-
-                <li>Fundamentos de seguridad</li>
-                <li>OWASP Top 10</li>
-                <li>Seguridad en aplicaciones</li>
-                <li>Control de accesos</li>
-
-              </ul>
-
+                <ul class="list-unstyled mt-3">
+                  <li>Fundamentos de seguridad</li>
+                  <li>OWASP Top 10</li>
+                  <li>Seguridad en aplicaciones</li>
+                  <li>Control de accesos</li>
+                </ul>
+              </div>
             </div>
-
           </div>
 
-        </div>
+          <!-- Herramientas -->
 
-        <!-- Herramientas -->
+          <div class="col-md-3">
+            <div class="card skill-card h-100 text-center">
+              <div class="card-body">
+                <h5 class="card-title">
+                  <i class="bi bi-tools text-accent"></i><br />
+                  Herramientas
+                </h5>
 
-        <div class="col-md-3">
-
-          <div class="card skill-card h-100 text-center">
-
-            <div class="card-body">
-
-              <h5 class="card-title">
-                <i class="bi bi-tools text-accent"></i><br>
-                Herramientas
-              </h5>
-
-              <ul class="list-unstyled mt-3">
-
-                <li>Git / GitHub</li>
-                <li>Visual Studio</li>
-                <li>VSCode</li>
-                <li>Linux básico</li>
-
-              </ul>
-
+                <ul class="list-unstyled mt-3">
+                  <li>Git / GitHub</li>
+                  <li>Visual Studio</li>
+                  <li>VSCode</li>
+                  <li>Linux básico</li>
+                </ul>
+              </div>
             </div>
-
           </div>
-
         </div>
-
       </div>
+    </section>
 
-    </div>
+    <!-- CIBERSEGURIDAD -->
 
-  </section>
+    <section id="security" class="py-5 text-center" data-aos="fade-up">
+      <div class="container">
+        <h2 class="text-accent mb-4">
+          <i class="bi bi-shield-lock-fill"></i> Ciberseguridad
+        </h2>
 
-  <!-- CIBERSEGURIDAD -->
+        <p class="mx-auto" style="max-width: 700px">
+          Actualmente me encuentro profundizando en ciberseguridad con foco en
+          seguridad de aplicaciones, protección de sistemas y buenas prácticas
+          para prevenir vulnerabilidades en software.
+        </p>
 
-  <section id="security" class="py-5 text-center" data-aos="fade-up">
-
-    <div class="container">
-
-      <h2 class="text-accent mb-4">
-        <i class="bi bi-shield-lock-fill"></i> Ciberseguridad
-      </h2>
-
-      <p class="mx-auto" style="max-width:700px;">
-
-        Actualmente me encuentro profundizando en ciberseguridad con foco en
-        seguridad de aplicaciones, protección de sistemas y buenas prácticas
-        para prevenir vulnerabilidades en software.
-
-      </p>
-
-      <ul class="list-unstyled mt-4">
-
-        <li>Fundamentos de seguridad informática</li>
-        <li>OWASP Top 10</li>
-        <li>Seguridad en aplicaciones web</li>
-        <li>Protección de información</li>
-        <li>Gestión de accesos</li>
-
-      </ul>
-
-    </div>
-
-  </section>
-
-  <!-- PROYECTOS -->
-
-  <section id="projects" class="py-5">
-
-    <div class="container">
-
-      <h2 class="text-center mb-4 text-accent">
-        <i class="bi bi-folder-fill"></i> Proyectos
-      </h2>
-
-      <div class="row g-4">
-
-        <div class="col-md-4">
-
-          <div class="project-card p-4 rounded shadow-sm h-100">
-
-            <h4>
-              <i class="bi bi-shield-check"></i> Seguridad en Aplicaciones
-            </h4>
-
-            <p>
-
-              Aplicación desarrollada aplicando buenas prácticas de desarrollo
-              seguro como validación de datos, control de accesos y manejo
-              seguro de información.
-
-            </p>
-
-          </div>
-
-        </div>
-
-        <div class="col-md-4">
-
-          <div class="project-card p-4 rounded shadow-sm h-100">
-
-            <h4>
-              <i class="bi bi-database-lock"></i> Diseño Seguro de Bases de Datos
-            </h4>
-
-            <p>
-
-              Modelado de base de datos relacional aplicando integridad de datos,
-              control de accesos y protección de información.
-
-            </p>
-
-          </div>
-
-        </div>
-
-        <div class="col-md-4">
-
-          <div class="project-card p-4 rounded shadow-sm h-100">
-
-            <h4>
-              <i class="bi bi-bug"></i> Análisis de Vulnerabilidades
-            </h4>
-
-            <p>
-
-              Práctica de identificación de vulnerabilidades en aplicaciones
-              y sistemas, evaluando riesgos y proponiendo medidas de mitigación.
-
-            </p>
-
-          </div>
-
-        </div>
-
+        <ul class="list-unstyled mt-4">
+          <li>Fundamentos de seguridad informática</li>
+          <li>OWASP Top 10</li>
+          <li>Seguridad en aplicaciones web</li>
+          <li>Protección de información</li>
+          <li>Gestión de accesos</li>
+        </ul>
       </div>
+    </section>
 
-    </div>
+    <!-- PROYECTOS -->
 
-  </section>
+    <section id="projects" class="py-5">
+      <div class="container">
+        <h2 class="text-center mb-4 text-accent">
+          <i class="bi bi-folder-fill"></i> Proyectos
+        </h2>
 
-  <!-- CONTACTO -->
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="project-card p-4 rounded shadow-sm h-100">
+              <h4>
+                <i class="bi bi-shield-check"></i> Seguridad en Aplicaciones
+              </h4>
 
-  <section id="contact" class="py-5 bg-dark text-light text-center">
+              <p>
+                Aplicación desarrollada aplicando buenas prácticas de desarrollo
+                seguro como validación de datos, control de accesos y manejo
+                seguro de información.
+              </p>
+            </div>
+          </div>
 
-    <div class="container">
+          <div class="col-md-4">
+            <div class="project-card p-4 rounded shadow-sm h-100">
+              <h4>
+                <i class="bi bi-database-lock"></i> Diseño Seguro de Bases de
+                Datos
+              </h4>
 
-      <h2 class="mb-4 text-accent">
-        <i class="bi bi-envelope-fill"></i> Contacto
-      </h2>
+              <p>
+                Modelado de base de datos relacional aplicando integridad de
+                datos, control de accesos y protección de información.
+              </p>
+            </div>
+          </div>
 
-      <a href="mailto:juantajam@gmail.com" class="text-accent d-block mb-2">
-        <i class="bi bi-envelope"></i> juantajam@gmail.com
-      </a>
+          <div class="col-md-4">
+            <div class="project-card p-4 rounded shadow-sm h-100">
+              <h4><i class="bi bi-bug"></i> Análisis de Vulnerabilidades</h4>
 
-      <a href="https://www.linkedin.com/in/juan-diego-tajam-7b1239269" target="_blank"
-        class="text-accent d-block mb-2">
-        <i class="bi bi-linkedin"></i> LinkedIn
-      </a>
+              <p>
+                Práctica de identificación de vulnerabilidades en aplicaciones y
+                sistemas, evaluando riesgos y proponiendo medidas de mitigación.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-      <a href="https://github.com/juandieetajam" target="_blank"
-        class="text-accent d-block mb-2">
-        <i class="bi bi-github"></i> GitHub
-      </a>
+    <!-- CONTACTO -->
 
-    </div>
+    <section id="contact" class="py-5 bg-dark text-light text-center">
+      <div class="container">
+        <h2 class="mb-4 text-accent">
+          <i class="bi bi-envelope-fill"></i> Contacto
+        </h2>
 
-  </section>
+        <a href="mailto:juantajam@gmail.com" class="text-accent d-block mb-2">
+          <i class="bi bi-envelope"></i> juantajam@gmail.com
+        </a>
 
-  <!-- FOOTER -->
+        <a
+          href="https://www.linkedin.com/in/juan-diego-tajam-7b1239269"
+          target="_blank"
+          class="text-accent d-block mb-2"
+        >
+          <i class="bi bi-linkedin"></i> LinkedIn
+        </a>
 
-  <footer class="text-center py-3 bg-black text-secondary">
+        <a
+          href="https://github.com/juandieetajam"
+          target="_blank"
+          class="text-accent d-block mb-2"
+        >
+          <i class="bi bi-github"></i> GitHub
+        </a>
+      </div>
+    </section>
 
-    <div class="container">
+    <!-- FOOTER -->
 
-      <p class="mb-1">
-        © 2026 Juan Diego Tajam — Portfolio de Desarrollo y Ciberseguridad
-      </p>
+    <footer class="text-center py-3 bg-black text-secondary">
+      <div class="container">
+        <p class="mb-1">
+          © 2026 Juan Diego Tajam — Portfolio de Desarrollo y Ciberseguridad
+        </p>
+      </div>
+    </footer>
 
-    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-  </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      AOS.init({ duration: 800, once: true });
+    </script>
 
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      const nameText = "Juan Diego Tajam";
+      let idx = 0;
 
-  <script>
-    AOS.init({ duration: 800, once: true });
-  </script>
+      function typeWriterName() {
+        if (idx < nameText.length) {
+          document.getElementById("typed-name").textContent +=
+            nameText.charAt(idx);
+          idx++;
 
-  <script>
-
-    const nameText = "Juan Diego Tajam";
-    let idx = 0;
-
-    function typeWriterName() {
-
-      if (idx < nameText.length) {
-
-        document.getElementById("typed-name").textContent += nameText.charAt(idx);
-        idx++;
-
-        setTimeout(typeWriterName, 100);
-
+          setTimeout(typeWriterName, 100);
+        }
       }
 
-    }
+      setInterval(() => {
+        const cursor = document.getElementById("cursor");
 
-    setInterval(() => {
+        cursor.style.visibility =
+          cursor.style.visibility === "hidden" ? "visible" : "hidden";
+      }, 500);
 
-      const cursor = document.getElementById("cursor");
-
-      cursor.style.visibility =
-        cursor.style.visibility === "hidden" ? "visible" : "hidden";
-
-    }, 500);
-
-    window.onload = typeWriterName;
-
-  </script>
-
-</body>
+      window.onload = typeWriterName;
+    </script>
+  </body>
 </html>

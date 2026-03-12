@@ -1,8 +1,8 @@
 /* ===== FUENTE Y BASE ===== */
+
 body {
   font-family: 'Poppins', sans-serif;
   background-color: #121212;
-  /* Fondo oscuro minimalista */
   color: #f1f1f1;
   line-height: 1.6;
   margin: 0;
@@ -17,9 +17,11 @@ section {
   color: #3399ff !important;
 }
 
+
 /* ===== NAVBAR ===== */
+
 .modern-navbar {
-  background: rgba(20, 20, 20, 0.4); /* más translúcido */
+  background: rgba(20, 20, 20, 0.4);
   backdrop-filter: blur(15px) saturate(180%);
   -webkit-backdrop-filter: blur(15px) saturate(180%);
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
@@ -33,7 +35,9 @@ section {
   box-shadow: 0 2px 20px rgba(51, 153, 255, 0.3);
 }
 
-/* ===== Marca ===== */
+
+/* ===== BRAND ===== */
+
 .brand-gradient {
   background: linear-gradient(90deg, #3399ff, #6f00ff, #00ccff);
   background-size: 200% auto;
@@ -46,12 +50,24 @@ section {
 }
 
 @keyframes brandColorFlow {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+
 }
 
-/* ===== Links ===== */
+
+/* ===== NAV LINKS ===== */
+
 .nav-link {
   color: #e5e5e5 !important;
   font-weight: 400;
@@ -65,6 +81,7 @@ section {
 }
 
 .nav-link::after {
+
   content: "";
   position: absolute;
   left: 0;
@@ -74,6 +91,7 @@ section {
   background: linear-gradient(90deg, #3399ff, #6f00ff, #00ccff);
   transition: width 0.4s ease;
   border-radius: 2px;
+
 }
 
 .nav-link:hover::after {
@@ -88,118 +106,46 @@ section {
   width: 100%;
 }
 
-/* ===== BOTÓN DE MENÚ (HAMBURGUESA) ===== */
-.custom-toggler {
-  border: none;
-  outline: none;
-  box-shadow: none;
-  background: transparent;
-  position: relative;
-  z-index: 1100;
-}
+.section-card {
 
-.custom-toggler .navbar-toggler-icon {
-  background: none;
-  width: 1.8em;
-  height: 1.4em;
-  position: relative;
-  display: inline-block;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
+  background: #202020;
 
-.custom-toggler .navbar-toggler-icon::before,
-.custom-toggler .navbar-toggler-icon::after,
-.custom-toggler .navbar-toggler-icon div {
-  content: "";
-  position: absolute;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  border-radius: 2px;
-  background: linear-gradient(90deg, #00b4ff, #8a2eff, #00f5d4);
-  transition: all 0.4s ease;
-}
+  border-radius: 15px;
 
-.custom-toggler .navbar-toggler-icon::before {
-  top: 0;
-}
+  padding: 2rem;
 
-.custom-toggler .navbar-toggler-icon div {
-  top: 50%;
-  transform: translateY(-50%);
-}
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
 
-.custom-toggler .navbar-toggler-icon::after {
-  bottom: 0;
-}
-
-/* Hover: resalta el gradiente */
-.custom-toggler:hover .navbar-toggler-icon::before,
-.custom-toggler:hover .navbar-toggler-icon::after,
-.custom-toggler:hover .navbar-toggler-icon div {
-  background: linear-gradient(90deg, #00f5d4, #3399ff, #a855f7);
-  box-shadow: 0 0 10px rgba(0, 255, 255, 0.4);
-}
-
-/* Animación hamburguesa → X */
-.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::before {
-  transform: rotate(45deg);
-  top: 50%;
-  background: linear-gradient(90deg, #66b3ff, #8a2eff, #00f5d4);
-}
-
-.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::after {
-  transform: rotate(-45deg);
-  bottom: auto;
-  top: 50%;
-  background: linear-gradient(90deg, #66b3ff, #8a2eff, #00f5d4);
-}
-
-.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon div {
-  opacity: 0;
-}
-
-/* ===== RESPONSIVE ===== */
-@media (max-width: 992px) {
-  .modern-navbar {
-    background: #0d0d0d !important;
-    backdrop-filter: none;
-  }
-
-  .nav-link {
-    text-align: center;
-    display: block;
-    margin: 8px 0;
-  }
 }
 
 /* ===== HERO ===== */
+
 .hero {
+
   height: 100vh;
-  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
-  color: #f1f1f1;
   padding: 0 20px;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
 
-  /* 🌈 Fondo más colorido y animación más lenta */
+  text-align: center;
+
   background: linear-gradient(-45deg,
       #0a0a0a,
       #1b1b2f,
       #16213e,
       #1a1a1a,
       #0f3460);
+
   background-size: 400% 400%;
   animation: smoothGradient 25s ease infinite;
+
 }
 
 @keyframes smoothGradient {
+
   0% {
     background-position: 0% 50%;
   }
@@ -211,88 +157,118 @@ section {
   100% {
     background-position: 0% 50%;
   }
-}
 
-.hero::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: repeating-linear-gradient(45deg,
-      rgba(255, 255, 255, 0.02),
-      rgba(255, 255, 255, 0.02) 2px,
-      transparent 2px,
-      transparent 25px);
-  opacity: 0.2;
-  /* Mantiene un efecto de textura elegante */
-  z-index: -1;
 }
 
 .hero h1 {
   font-size: 2.8rem;
-  color: #f1f1f1;
-  margin-bottom: 1rem;
 }
 
 .hero p {
   font-size: 1.2rem;
   color: #b3b3b3;
-  margin-bottom: 2rem;
 }
 
 .btn-custom {
-  background-color: #3399ff;
+
+  background: #3399ff;
   color: #121212;
+
   border: none;
   padding: 0.75rem 1.5rem;
+
   border-radius: 25px;
   text-decoration: none;
-  transition: background-color 0.3s ease;
+
+  transition: background 0.3s ease;
+
 }
 
 .btn-custom:hover {
-  background-color: #267bcc;
+  background: #267bcc;
 }
 
-/* ===== SOBRE MÍ ===== */
+
+/* ===== ABOUT ===== */
+
 #about {
-  background-color: #181818;
-  /* Gris oscuro */
-  color: #f1f1f1;
+  background: #181818;
   padding: 5rem 0;
 }
 
 .profile-img {
+
   width: 180px;
   height: 180px;
+
   object-fit: cover;
+
   border-radius: 50%;
   border: 3px solid #3399ff;
+
   box-shadow: 0 4px 20px rgba(51, 153, 255, 0.25);
+
 }
 
-/* ===== HABILIDADES ===== */
-#skills {
-  background-color: #1b1b1b;
-  /* Gris oscuro */
-  color: #f1f1f1;
+#about p {
+  color: #bdbdbd;
+}
+
+/* ===== EXPERIENCE ===== */
+
+#experience {
+
+  background: #141414;
   padding: 5rem 0;
+
+}
+
+#experience h5 {
+
+  color: #3399ff;
+  margin-top: 1rem;
+
+}
+
+#experience p {
+  color: #bdbdbd;
+}
+
+#experience li {
+
+  color: #cccccc;
+  margin-bottom: 5px;
+
+}
+
+/* ===== SKILLS ===== */
+
+#skills {
+
+  background: #1b1b1b;
+  padding: 5rem 0;
+
 }
 
 .skill-card {
+
   background: #202020;
-  /* Gris oscuro */
-  border: none;
+
   border-radius: 15px;
+
   height: 100%;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  transition: transform 0.3s ease,
+    box-shadow 0.3s ease;
+
 }
 
 .skill-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 18px rgba(51, 153, 255, 0.2);
+
+  transform: translateY(-6px);
+
+  box-shadow: 0 8px 25px rgba(51, 153, 255, 0.2);
+
 }
 
 .skill-card h5 {
@@ -301,131 +277,133 @@ section {
 
 .skill-card li {
   color: #cccccc;
-  /* Gris medio */
 }
 
-/* ===== PROYECTOS ===== */
-#projects {
-  background-color: #181818;
-  color: #f1f1f1;
+
+/* ===== CYBERSECURITY ===== */
+
+#security {
+
+  background: #161616;
   padding: 5rem 0;
-  position: relative;
-  overflow: hidden;
+
 }
 
-/* Fondo animado sutil detrás de los proyectos */
-#projects::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -50%;
-  width: 200%;
-  height: 100%;
-  background: linear-gradient(120deg, #3399ff, #6f00ff, #00ccff, #3399ff);
-  background-size: 400% 400%;
-  opacity: 0.05;
-  animation: gradientMove 30s linear infinite;
-  z-index: 0;
+#security p {
+  color: #bdbdbd;
 }
 
-@keyframes gradientMove {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+#security li {
+
+  color: #cccccc;
+  margin-bottom: 5px;
+
 }
 
-/* Contenedor de proyectos por encima del fondo */
-#projects .container {
-  position: relative;
-  z-index: 1;
+
+/* ===== PROJECTS ===== */
+
+#projects {
+
+  background: #181818;
+  padding: 5rem 0;
+
 }
 
-.project-intro {
-  color: #b3b3b3;
-  font-size: 1.1rem;
-}
-
-/* Tarjetas de proyecto con gradiente y sombra dinámica */
 .project-card {
+
   background: linear-gradient(145deg, #202020, #1c1c1c);
+
   border-radius: 15px;
+
   padding: 1.5rem;
+
   height: 100%;
-  transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.6s ease;
+
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease,
+    background 0.5s ease;
+
   box-shadow: 0 6px 18px rgba(51, 153, 255, 0.1);
+
 }
 
 .project-card h4 {
-  font-size: 1.3rem;
-  margin-bottom: 0.8rem;
+
   color: #66b3ff;
+
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  transition: color 0.4s ease;
+
+  gap: 8px;
+
 }
 
 .project-card p {
   color: #cccccc;
-  font-size: 0.95rem;
 }
 
-/* Hover más dinámico: levanta la tarjeta y cambia gradiente */
 .project-card:hover {
+
   transform: translateY(-8px) scale(1.03);
-  background: linear-gradient(145deg, #3399ff33, #6f00ff33, #00ccff33);
+
+  background: linear-gradient(145deg,
+      #3399ff33,
+      #6f00ff33,
+      #00ccff33);
+
   box-shadow: 0 12px 30px rgba(51, 153, 255, 0.3);
-}
 
-/* Iconos más visibles al pasar el mouse */
-.project-card:hover h4 i {
-  transform: rotate(15deg);
-  color: #00ccff;
-  transition: transform 0.5s ease, color 0.4s ease;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .project-card {
-    margin-bottom: 1rem;
-  }
 }
 
 
-/* ===== CONTACTO ===== */
+/* ===== CONTACT ===== */
+
 #contact {
-  background-color: #0f0f0f;
-  /* Negro profundo */
-  color: #f1f1f1;
+
+  background: #0f0f0f;
   padding: 5rem 0;
+
 }
 
 #contact a {
+
   color: #66b3ff;
-  /* Azul claro */
+
   text-decoration: none;
+
   display: block;
-  margin-bottom: 0.5rem;
+  margin-bottom: 8px;
+
   transition: color 0.3s ease;
+
 }
 
 #contact a:hover {
-  color: #f1f1f1;
-  /* Gris claro */
+  color: #ffffff;
 }
+
 
 /* ===== FOOTER ===== */
+
 footer {
-  background-color: #0a0a0a;
-  /* Negro profundo */
+
+  background: #0a0a0a;
+
   color: #999999;
-  /* Gris medio */
+
   font-size: 0.9rem;
+
   padding: 1rem 0;
+
 }
 
+
 /* ===== RESPONSIVE ===== */
-@media (max-width: 768px) {
+
+@media (max-width:768px) {
+
   .hero h1 {
     font-size: 2rem;
   }
@@ -442,9 +420,12 @@ footer {
   .navbar-nav {
     text-align: center;
   }
+
 }
 
-/* Sistema de estrellas */
+
+/* ===== RATING STARS ===== */
+
 .stars {
   display: inline-block;
   font-size: 2.5rem;
@@ -455,10 +436,12 @@ footer {
 .star:hover,
 .star.hovered,
 .star.selected {
+
   color: #3399ff;
-  /* azul gradiente si quieres puedes animarlo */
   transition: color 0.2s ease;
+
 }
+
 
 #rating-value {
   color: #b3b3b3;
