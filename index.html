@@ -45,14 +45,6 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
     <link rel="stylesheet" href="styles.css" />
-
-    <script>
-      window.addEventListener("scroll", function () {
-        const navbar = document.querySelector(".modern-navbar");
-        if (window.scrollY > 50) navbar.classList.add("scrolled");
-        else navbar.classList.remove("scrolled");
-      });
-    </script>
   </head>
 
   <body
@@ -128,9 +120,15 @@
       <p class="lead mt-3">
         Analista en TI en formación | Ciberseguridad | Desarrollo de Software
       </p>
-      <button class="btn-custom mt-3" onclick="descargarAmbosCV()">
-        Descargar CV
-      </button>
+      <div class="mt-3 d-flex gap-2 justify-content-center">
+        <a href="./img/Juan_Diego_Tajam_Desarrollado-3.pdf" download class="btn-custom">
+          💻 CV Desarrollo
+        </a>
+
+        <a href="./img/CV_Juan_Diego_Tajam_Ciberseguridad-1.pdf" download class="btn-custom">
+          🔐 CV Ciberseguridad
+        </a>
+      </div>
     </header>
 
     <!-- SOBRE MI -->
